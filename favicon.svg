@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="K-Cheer Studio">
+  <defs>
+    <radialGradient id="cg" cx="32" cy="26" r="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d7463c" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#d7463c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="12.8" fill="#f7f2ee"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="12.1" fill="none" stroke="#2e2020" stroke-width="1.5"/>
+  <circle cx="32" cy="26" r="20" fill="url(#cg)"/>
+  <g stroke="#c02c28" stroke-width="1.9" stroke-linecap="butt">
+    <line x1="22.1" y1="14.4" x2="19.3" y2="11"/>
+    <line x1="26.4" y1="12.4" x2="25.3" y2="8.2"/>
+    <line x1="32" y1="11.5" x2="32" y2="7.2"/>
+    <line x1="37.6" y1="12.4" x2="38.7" y2="8.2"/>
+    <line x1="41.9" y1="14.4" x2="44.7" y2="11"/>
+  </g>
+  <circle cx="32" cy="25.9" r="10.6" fill="#c02c28"/>
+  <rect x="26.7" y="34.9" width="10.6" height="3.8" rx="1.9" fill="#2e2020"/>
+  <rect x="28.7" y="34.9" width="6.6" height="18.5" rx="3.3" fill="#c02c28"/>
+  <ellipse cx="29.8" cy="22.8" rx="2.9" ry="2.7" fill="#fff8f4" opacity=".85"/>
+</svg>
