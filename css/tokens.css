@@ -1,0 +1,69 @@
+/* Hallmark · tokens · K-Cheer Studio · print studio light · v2.0.0 */
+:root {
+  color-scheme: light;
+
+  --color-paper: oklch(97.2% 0.008 25);
+  --color-paper-2: oklch(93.8% 0.012 25);
+  --color-paper-3: oklch(88.5% 0.016 22);
+  --color-ink: oklch(20.5% 0.022 350);
+  --color-ink-2: oklch(42% 0.02 350);
+  --color-ink-3: oklch(50% 0.018 350);
+  --color-rule: oklch(84% 0.012 25);
+  --color-edge: oklch(62% 0.015 350);
+  --color-accent: oklch(55% 0.19 27);
+  --color-accent-hover: oklch(48.5% 0.185 27);
+  --color-accent-ink: oklch(98.5% 0.006 27);
+  --color-accent-soft: oklch(93.5% 0.04 27);
+  --color-focus: oklch(52% 0.19 27);
+  --color-seal: oklch(40% 0.09 250);
+  --color-seal-ink: oklch(97% 0.01 250);
+
+  --font-display: 'Archivo Black', 'Pretendard', system-ui, sans-serif;
+  --font-body: 'Pretendard', system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-md: 0.9375rem;
+  --text-body: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.5rem;
+
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 144px;
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-sheet: 4px;
+  --radius-round: 999px;
+
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky: 200;
+  --z-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  --measure: 68ch;
+  --container: 1520px;
+  --gutter: clamp(16px, 4vw, 56px);
+  --rail: 352px;
+  --control-h: 36px;
+  --hit: 44px;
+  --shadow-sheet: 0 1px 2px oklch(20.5% 0.022 350 / 0.08), 0 18px 40px oklch(20.5% 0.022 350 / 0.12);
+  --shadow-raised: 0 1px 2px oklch(20.5% 0.022 350 / 0.06);
+}

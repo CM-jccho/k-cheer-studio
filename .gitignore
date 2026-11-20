@@ -1,0 +1,7 @@
+.hallmark/
+build/
+tests/.downloads/
+tests/.shots/
+__pycache__/
+*.pyc
+.DS_Store
