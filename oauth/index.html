@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>MOA Daily · 연결 콜백</title>
+<style>
+  :root { color-scheme: light; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+         font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI",Roboto,sans-serif;
+         background:#faf8f5; color:#1d1d1f; padding:24px; }
+  .card { width:100%; max-width:560px; background:#fff; border:1px solid #e8e3db; border-radius:18px;
+          padding:28px 24px; box-shadow:0 10px 30px rgba(0,0,0,.05); }
+  h1 { font-size:19px; margin:0 0 6px; letter-spacing:-.01em; }
+  p { font-size:14px; line-height:1.6; color:#55524d; margin:0 0 14px; }
+  .label { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#8a857e; margin-bottom:6px; }
+  code { display:block; word-break:break-all; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+         font-size:13px; background:#f4f1ec; border:1px solid #e8e3db; border-radius:12px; padding:14px; }
+  .muted { font-size:12px; color:#8a857e; margin-top:16px; }
+  .ok { color:#1d6b3f; font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1 id="title">연결 결과를 확인하는 중…</h1>
+    <p id="desc">잠시만 기다려 주세요.</p>
+    <div id="box" hidden>
+      <div class="label" id="paramLabel">code</div>
+      <code id="paramValue"></code>
+    </div>
+    <p class="muted">MOA Daily 앱 · Instagram API 연결용 페이지입니다. 이 화면의 값을 복사해 전달해 주세요.</p>
+  </div>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var h = new URLSearchParams(location.hash.replace(/^#/, ''));
+  function get(k) { return q.get(k) || h.get(k) || ''; }
+  var code = get('code'), state = get('state'), error = get('error'), desc = get('error_description');
+  var title = document.getElementById('title'), d = document.getElementById('desc');
+  var box = document.getElementById('box'), pl = document.getElementById('paramLabel'), pv = document.getElementById('paramValue');
+  if (error) {
+    title.textContent = '연결이 완료되지 않았습니다';
+    d.textContent = error + (desc ? ' — ' + desc : '');
+    pl.textContent = 'error'; pv.textContent = error; box.hidden = false;
+  } else if (code) {
+    title.innerHTML = '<span class="ok">연결 코드를 받았습니다</span>';
+    d.textContent = '아래 코드를 복사해서 보내 주세요. (코드는 1시간 동안 한 번만 사용할 수 있습니다)';
+    pl.textContent = 'code'; pv.textContent = code; box.hidden = false;
+    if (state) { var s = document.createElement('code'); s.textContent = 'state: ' + state; box.appendChild(s); }
+  } else {
+    title.textContent = '받은 값이 없습니다';
+    d.textContent = '이 페이지는 Instagram/Facebook 로그인 후 돌아오는 콜백 페이지입니다.';
+  }
+})();
+</script>
+</body>
+</html>
